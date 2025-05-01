@@ -1,0 +1,118 @@
+/ {
+    chosen {
+        nordic,pm-ext-flash = &w25q128jv;
+    };
+};
+
+// &pinctrl {
+//     qspi_default: qspi_default {
+//         group1 {
+//             psels = <NRF_PSEL(QSPI_SCK, 0, 24)>,
+//                     <NRF_PSEL(QSPI_IO0, 0, 22)>,
+//                     <NRF_PSEL(QSPI_IO1, 0, 23)>,
+//                     <NRF_PSEL(QSPI_IO2, 0, 25)>,
+//                     <NRF_PSEL(QSPI_IO3, 0, 20)>,
+//                     <NRF_PSEL(QSPI_CSN, 0, 21)>;
+//             nordic,drive-mode = <NRF_DRIVE_H0H1>;
+//         };
+//     };
+
+//     qspi_sleep: qspi_sleep {
+//         group1 {
+//             psels = <NRF_PSEL(QSPI_SCK, 0, 24)>,
+//                     <NRF_PSEL(QSPI_IO0, 0, 22)>,
+//                     <NRF_PSEL(QSPI_IO1, 0, 23)>,
+//                     <NRF_PSEL(QSPI_IO2, 0, 25)>,
+//                     <NRF_PSEL(QSPI_IO3, 0, 20)>;
+//             low-power-enable;
+//         };
+//         group2 {
+//             psels = <NRF_PSEL(QSPI_CSN, 0, 21)>;
+//             low-power-enable;
+//             bias-pull-up;
+//         };
+//     };
+// };
+
+&pinctrl {
+    spi0_default: spi0_default {
+        group1 {
+            psels = <NRF_PSEL(SPIM_SCK, 0, 24)>,
+                    <NRF_PSEL(SPIM_MOSI, 0, 22)>,
+                    <NRF_PSEL(SPIM_MISO, 0, 23)>;
+        };
+    };
+    spi0_sleep: spi0_sleep {
+        group1 {
+            psels = <NRF_PSEL(SPIM_SCK, 0, 24)>,
+                    <NRF_PSEL(SPIM_MOSI, 0, 22)>,
+                    <NRF_PSEL(SPIM_MISO, 0, 23)>;
+            low-power-enable;
+        };
+    };
+};
+
+// &qspi {
+//     status = "okay";
+//     pinctrl-0 = <&qspi_default>;
+//     pinctrl-1 = <&qspi_sleep>;
+//     pinctrl-names = "default", "sleep";
+
+//     w25q128jv: qspi_flash@0 {
+//         compatible = "nordic,qspi-nor";
+//         reg = <0>;
+//         writeoc = "pp4io";
+//         readoc = "read4io";
+//         sck-frequency = <32000000>;
+//         jedec-id = [ef 40 18];
+//         size = <0x1000000>;    // 16 MB
+//         has-dpd;
+//         t-enter-dpd = <3000>;  // 3ms
+//         t-exit-dpd = <30000>;  // 30ms
+//         // address-size = <24>;
+//         // erase-size = <4096>;
+//         page-size = <256>;
+//     };
+// };
+
+
+&spi0 {
+    status = "okay";
+    pinctrl-0 = <&spi0_default>;
+    pinctrl-1 = <&spi0_sleep>;
+    pinctrl-names = "default", "sleep";
+    cs-gpios = <&gpio0 21 GPIO_ACTIVE_LOW>;
+
+    w25q128jv: flash@0 {
+        compatible = "jedec,spi-nor";
+        reg = <0>;
+        spi-max-frequency = <32000000>; // 32MHz
+        jedec-id = [ef 40 18];
+        size = <0x1000000>; // 16MB
+        wp-gpios = <&gpio0 25 GPIO_ACTIVE_LOW>;
+        hold-gpios = <&gpio0 20 GPIO_ACTIVE_LOW>;
+    };
+};
+
+
+&w25q128jv {
+    partitions {
+        compatible = "fixed-partitions";
+        #address-cells = <1>;
+        #size-cells = <1>;
+
+        storagefs: partition@0 {
+            label = "storagefs";
+            reg = <0x00000000 0x01000000>; /* 16MB full size */
+        };
+    };
+};
+
+/* Disable unused flash */
+&mx25r64 {
+    status = "disabled";
+};
+
+&rtc2 {
+    status = "okay";
+};

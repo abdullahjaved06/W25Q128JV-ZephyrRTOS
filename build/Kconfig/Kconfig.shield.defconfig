@@ -1,0 +1,2 @@
+osource "/media/abdullah/Development/Abdullah/projects/AircraftMonitoringDevice/Firmware/TestCodes/w25q_ext_flash/boards/shields/*/Kconfig.defconfig"
+osource "/home/abdullah/ncs/v2.9.0/nrf/boards/shields/*/Kconfig.defconfig"
