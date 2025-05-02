@@ -1,6 +1,6 @@
 external_flash:
   base_address: 0x0
-  default_driver_kconfig: CONFIG_PM_EXTERNAL_FLASH_HAS_DRIVER
+  default_driver_kconfig: CONFIG_NORDIC_QSPI_NOR
   device: DT_CHOSEN(nordic_pm_ext_flash)
   dynamic_partition: null
   name: external_flash

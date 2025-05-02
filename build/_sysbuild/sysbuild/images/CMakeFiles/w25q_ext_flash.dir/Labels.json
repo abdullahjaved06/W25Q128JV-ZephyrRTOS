@@ -1,0 +1,43 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "/media/abdullah/Development/Abdullah/projects/AircraftMonitoringDevice/Firmware/TestCodes/w25q_ext_flash/build/_sysbuild/sysbuild/images/CMakeFiles/w25q_ext_flash"
+		},
+		{
+			"file" : "/media/abdullah/Development/Abdullah/projects/AircraftMonitoringDevice/Firmware/TestCodes/w25q_ext_flash/build/_sysbuild/sysbuild/images/CMakeFiles/w25q_ext_flash.rule"
+		},
+		{
+			"file" : "/media/abdullah/Development/Abdullah/projects/AircraftMonitoringDevice/Firmware/TestCodes/w25q_ext_flash/build/_sysbuild/sysbuild/images/CMakeFiles/w25q_ext_flash-complete.rule"
+		},
+		{
+			"file" : "/media/abdullah/Development/Abdullah/projects/AircraftMonitoringDevice/Firmware/TestCodes/w25q_ext_flash/build/_sysbuild/sysbuild/images/w25q_ext_flash-prefix/src/w25q_ext_flash-stamp/w25q_ext_flash-build.rule"
+		},
+		{
+			"file" : "/media/abdullah/Development/Abdullah/projects/AircraftMonitoringDevice/Firmware/TestCodes/w25q_ext_flash/build/_sysbuild/sysbuild/images/w25q_ext_flash-prefix/src/w25q_ext_flash-stamp/w25q_ext_flash-configure.rule"
+		},
+		{
+			"file" : "/media/abdullah/Development/Abdullah/projects/AircraftMonitoringDevice/Firmware/TestCodes/w25q_ext_flash/build/_sysbuild/sysbuild/images/w25q_ext_flash-prefix/src/w25q_ext_flash-stamp/w25q_ext_flash-download.rule"
+		},
+		{
+			"file" : "/media/abdullah/Development/Abdullah/projects/AircraftMonitoringDevice/Firmware/TestCodes/w25q_ext_flash/build/_sysbuild/sysbuild/images/w25q_ext_flash-prefix/src/w25q_ext_flash-stamp/w25q_ext_flash-install.rule"
+		},
+		{
+			"file" : "/media/abdullah/Development/Abdullah/projects/AircraftMonitoringDevice/Firmware/TestCodes/w25q_ext_flash/build/_sysbuild/sysbuild/images/w25q_ext_flash-prefix/src/w25q_ext_flash-stamp/w25q_ext_flash-mkdir.rule"
+		},
+		{
+			"file" : "/media/abdullah/Development/Abdullah/projects/AircraftMonitoringDevice/Firmware/TestCodes/w25q_ext_flash/build/_sysbuild/sysbuild/images/w25q_ext_flash-prefix/src/w25q_ext_flash-stamp/w25q_ext_flash-patch.rule"
+		},
+		{
+			"file" : "/media/abdullah/Development/Abdullah/projects/AircraftMonitoringDevice/Firmware/TestCodes/w25q_ext_flash/build/_sysbuild/sysbuild/images/w25q_ext_flash-prefix/src/w25q_ext_flash-stamp/w25q_ext_flash-update.rule"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"w25q_ext_flash"
+		],
+		"name" : "w25q_ext_flash"
+	}
+}

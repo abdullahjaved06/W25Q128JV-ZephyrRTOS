@@ -15,6 +15,5 @@
   "kconfigFragments": [],
   "snippets": [],
   "dtcOverlays": [],
-  "extraDtcOverlays": [],
-  "sysbuild": false
+  "extraDtcOverlays": []
 }

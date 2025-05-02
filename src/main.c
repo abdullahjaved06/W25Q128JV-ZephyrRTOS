@@ -94,6 +94,8 @@ static void list_files(const char *dirpath)
 void main(void)
 {
     int rc;
+    //  LOG_INF("Erasing flash partition...");
+    // erase_full_flash_partition();
     // erase_full_flash_partition();
     LOG_INF("Mounting LittleFS...");
     rc = fs_mount(&fs_mnt);
@@ -105,16 +107,21 @@ void main(void)
     LOG_INF("Mounted LittleFS at %s", fs_mnt.mnt_point);
 
     // Ensure directory exists
-    fs_mkdir("/lfs/logs");
+    rc = fs_mkdir("/lfs/logs");
+    if (rc < 0 && rc != -EEXIST) {
+        LOG_ERR("mkdir failed: %d", rc);
+    } else {
+        LOG_INF("Directory /lfs/logs is ready.");
+    }
 
-    // Append sample data
-    append_to_file("data.txt", "Hello from Zephyr!\n");
+    // // Append sample data
+    // append_to_file("data.txt", "Hello from Zephyr!\n");
 
-    // Read the file
-    read_file("data.txt");
+    // // Read the file
+    // read_file("data.txt");
 
-    // List files in logs dir
-    list_files("/lfs/logs");
+    // // List files in logs dir
+    // list_files("/lfs/logs");
 }
 
 void erase_full_flash_partition(void)
