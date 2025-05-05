@@ -1,7 +1,0 @@
-default: w25q_ext_flash
-build_dir: /media/abdullah/Development/Abdullah/projects/AircraftMonitoringDevice/Firmware/TestCodes/w25q_ext_flash/build
-domains:
-  - name: w25q_ext_flash
-    build_dir: /media/abdullah/Development/Abdullah/projects/AircraftMonitoringDevice/Firmware/TestCodes/w25q_ext_flash/build/w25q_ext_flash
-flash_order:
-  - w25q_ext_flash

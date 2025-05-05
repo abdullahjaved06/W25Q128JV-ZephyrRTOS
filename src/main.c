@@ -117,8 +117,8 @@ void main(void)
         LOG_ERR("Failed to get page info, error: %d\n", ret);
     }
  
-        LOG_INF("Erasing flash partition...");
-    erase_full_flash_partition();
+    //     LOG_INF("Erasing flash partition...");
+    // erase_full_flash_partition();
     LOG_INF("Mounting LittleFS...");
     rc = fs_mount(&fs_mnt);
     if (rc < 0) {
@@ -136,14 +136,14 @@ void main(void)
         LOG_INF("Directory /lfs/logs is ready.");
     }
 
-    // // Append sample data
-    // append_to_file("data.txt", "Hello from Zephyr!\n");
+    // Append sample data
+    append_to_file("data.txt", "Hello from Zephyr!\n");
 
-    // // Read the file
-    // read_file("data.txt");
+    // Read the file
+    read_file("data.txt");
 
-    // // List files in logs dir
-    // list_files("/lfs/logs");
+    // List files in logs dir
+    list_files("/lfs/logs");
 }
 
 void erase_full_flash_partition(void)

@@ -2,11 +2,11 @@ external_flash:
   address: 0x0
   end_address: 0x1000000
   region: external_flash
-  size: 0x8000000
+  size: 0x01000000
 
 littlefs_storage:
   address: 0x0
-  size: 0x8000000
+  size: 0x01000000
   region: external_flash
   device: w25q128jv
 

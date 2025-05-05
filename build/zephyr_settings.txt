@@ -6,8 +6,6 @@
 # and/or the west manifest file.
 #
 # See the Modules guide for more information.
-"BOARD_ROOT":"/home/abdullah/ncs/v2.9.0/nrf"
-"DTS_ROOT":"/home/abdullah/ncs/v2.9.0/nrf"
-"SNIPPET_ROOT":"/home/abdullah/ncs/v2.9.0/nrf"
-"MODULE_EXT_ROOT":"/home/abdullah/ncs/v2.9.0/nrf"
-"SOC_ROOT":"/home/abdullah/ncs/v2.9.0/modules/soc-hwmv1"
+"BOARD_ROOT":"/home/abdullah/ncs/v2.5.0/nrf"
+"DTS_ROOT":"/home/abdullah/ncs/v2.5.0/nrf"
+"MODULE_EXT_ROOT":"/home/abdullah/ncs/v2.5.0/nrf"

@@ -1,12 +1,12 @@
 {
-  "toolchainPath": "/home/abdullah/ncs/toolchains/b77d8c1312",
-  "sdkPath": "/home/abdullah/ncs/v2.9.0",
-  "board": "nrf52840dk/nrf52840",
+  "toolchainPath": "/home/abdullah/ncs/toolchains/7795df4459",
+  "sdkPath": "/home/abdullah/ncs/v2.5.0",
+  "board": "nrf52840dk_nrf52840",
   "boardDirs": [
-    "/home/abdullah/ncs/v2.9.0/zephyr/boards/nordic/nrf52840dk"
+    "/home/abdullah/ncs/v2.5.0/zephyr/boards/arm/nrf52840dk_nrf52840"
   ],
   "boardRevision": "",
-  "boardDir": "/home/abdullah/ncs/v2.9.0/zephyr/boards/nordic/nrf52840dk",
+  "boardDir": "/home/abdullah/ncs/v2.5.0/zephyr/boards/arm/nrf52840dk_nrf52840",
   "shouldBuild": true,
   "optimizations": "none",
   "cmakeArgs": [],
