@@ -152,13 +152,14 @@
 /media/abdullah/Development/Abdullah/projects/AircraftMonitoringDevice/Firmware/TestCodes/w25q_ext_flash/build/w25q_ext_flash/zephyr/subsys/tracing/CMakeFiles/edit_cache.dir
 /media/abdullah/Development/Abdullah/projects/AircraftMonitoringDevice/Firmware/TestCodes/w25q_ext_flash/build/w25q_ext_flash/zephyr/subsys/usb/CMakeFiles/rebuild_cache.dir
 /media/abdullah/Development/Abdullah/projects/AircraftMonitoringDevice/Firmware/TestCodes/w25q_ext_flash/build/w25q_ext_flash/zephyr/subsys/usb/CMakeFiles/edit_cache.dir
-/media/abdullah/Development/Abdullah/projects/AircraftMonitoringDevice/Firmware/TestCodes/w25q_ext_flash/build/w25q_ext_flash/zephyr/subsys/disk/CMakeFiles/rebuild_cache.dir
-/media/abdullah/Development/Abdullah/projects/AircraftMonitoringDevice/Firmware/TestCodes/w25q_ext_flash/build/w25q_ext_flash/zephyr/subsys/disk/CMakeFiles/edit_cache.dir
+/media/abdullah/Development/Abdullah/projects/AircraftMonitoringDevice/Firmware/TestCodes/w25q_ext_flash/build/w25q_ext_flash/zephyr/subsys/settings/CMakeFiles/rebuild_cache.dir
+/media/abdullah/Development/Abdullah/projects/AircraftMonitoringDevice/Firmware/TestCodes/w25q_ext_flash/build/w25q_ext_flash/zephyr/subsys/settings/CMakeFiles/edit_cache.dir
+/media/abdullah/Development/Abdullah/projects/AircraftMonitoringDevice/Firmware/TestCodes/w25q_ext_flash/build/w25q_ext_flash/zephyr/subsys/settings/src/CMakeFiles/rebuild_cache.dir
+/media/abdullah/Development/Abdullah/projects/AircraftMonitoringDevice/Firmware/TestCodes/w25q_ext_flash/build/w25q_ext_flash/zephyr/subsys/settings/src/CMakeFiles/edit_cache.dir
 /media/abdullah/Development/Abdullah/projects/AircraftMonitoringDevice/Firmware/TestCodes/w25q_ext_flash/build/w25q_ext_flash/zephyr/drivers/CMakeFiles/rebuild_cache.dir
 /media/abdullah/Development/Abdullah/projects/AircraftMonitoringDevice/Firmware/TestCodes/w25q_ext_flash/build/w25q_ext_flash/zephyr/drivers/CMakeFiles/edit_cache.dir
 /media/abdullah/Development/Abdullah/projects/AircraftMonitoringDevice/Firmware/TestCodes/w25q_ext_flash/build/w25q_ext_flash/zephyr/drivers/disk/CMakeFiles/rebuild_cache.dir
 /media/abdullah/Development/Abdullah/projects/AircraftMonitoringDevice/Firmware/TestCodes/w25q_ext_flash/build/w25q_ext_flash/zephyr/drivers/disk/CMakeFiles/edit_cache.dir
-/media/abdullah/Development/Abdullah/projects/AircraftMonitoringDevice/Firmware/TestCodes/w25q_ext_flash/build/w25q_ext_flash/zephyr/drivers/disk/CMakeFiles/drivers__disk.dir
 /media/abdullah/Development/Abdullah/projects/AircraftMonitoringDevice/Firmware/TestCodes/w25q_ext_flash/build/w25q_ext_flash/zephyr/drivers/firmware/CMakeFiles/rebuild_cache.dir
 /media/abdullah/Development/Abdullah/projects/AircraftMonitoringDevice/Firmware/TestCodes/w25q_ext_flash/build/w25q_ext_flash/zephyr/drivers/firmware/CMakeFiles/edit_cache.dir
 /media/abdullah/Development/Abdullah/projects/AircraftMonitoringDevice/Firmware/TestCodes/w25q_ext_flash/build/w25q_ext_flash/zephyr/drivers/interrupt_controller/CMakeFiles/edit_cache.dir
@@ -193,9 +194,6 @@
 /media/abdullah/Development/Abdullah/projects/AircraftMonitoringDevice/Firmware/TestCodes/w25q_ext_flash/build/w25q_ext_flash/zephyr/drivers/gpio/CMakeFiles/rebuild_cache.dir
 /media/abdullah/Development/Abdullah/projects/AircraftMonitoringDevice/Firmware/TestCodes/w25q_ext_flash/build/w25q_ext_flash/zephyr/drivers/gpio/CMakeFiles/edit_cache.dir
 /media/abdullah/Development/Abdullah/projects/AircraftMonitoringDevice/Firmware/TestCodes/w25q_ext_flash/build/w25q_ext_flash/zephyr/drivers/gpio/CMakeFiles/drivers__gpio.dir
-/media/abdullah/Development/Abdullah/projects/AircraftMonitoringDevice/Firmware/TestCodes/w25q_ext_flash/build/w25q_ext_flash/zephyr/drivers/hwinfo/CMakeFiles/rebuild_cache.dir
-/media/abdullah/Development/Abdullah/projects/AircraftMonitoringDevice/Firmware/TestCodes/w25q_ext_flash/build/w25q_ext_flash/zephyr/drivers/hwinfo/CMakeFiles/edit_cache.dir
-/media/abdullah/Development/Abdullah/projects/AircraftMonitoringDevice/Firmware/TestCodes/w25q_ext_flash/build/w25q_ext_flash/zephyr/drivers/hwinfo/CMakeFiles/drivers__hwinfo.dir
 /media/abdullah/Development/Abdullah/projects/AircraftMonitoringDevice/Firmware/TestCodes/w25q_ext_flash/build/w25q_ext_flash/zephyr/drivers/pinctrl/CMakeFiles/rebuild_cache.dir
 /media/abdullah/Development/Abdullah/projects/AircraftMonitoringDevice/Firmware/TestCodes/w25q_ext_flash/build/w25q_ext_flash/zephyr/drivers/pinctrl/CMakeFiles/edit_cache.dir
 /media/abdullah/Development/Abdullah/projects/AircraftMonitoringDevice/Firmware/TestCodes/w25q_ext_flash/build/w25q_ext_flash/zephyr/drivers/pinctrl/CMakeFiles/drivers__pinctrl.dir
@@ -210,9 +208,6 @@
 /media/abdullah/Development/Abdullah/projects/AircraftMonitoringDevice/Firmware/TestCodes/w25q_ext_flash/build/w25q_ext_flash/zephyr/drivers/timer/CMakeFiles/rebuild_cache.dir
 /media/abdullah/Development/Abdullah/projects/AircraftMonitoringDevice/Firmware/TestCodes/w25q_ext_flash/build/w25q_ext_flash/zephyr/drivers/timer/CMakeFiles/edit_cache.dir
 /media/abdullah/Development/Abdullah/projects/AircraftMonitoringDevice/Firmware/TestCodes/w25q_ext_flash/build/w25q_ext_flash/zephyr/drivers/timer/CMakeFiles/drivers__timer.dir
-/media/abdullah/Development/Abdullah/projects/AircraftMonitoringDevice/Firmware/TestCodes/w25q_ext_flash/build/w25q_ext_flash/zephyr/drivers/watchdog/CMakeFiles/edit_cache.dir
-/media/abdullah/Development/Abdullah/projects/AircraftMonitoringDevice/Firmware/TestCodes/w25q_ext_flash/build/w25q_ext_flash/zephyr/drivers/watchdog/CMakeFiles/rebuild_cache.dir
-/media/abdullah/Development/Abdullah/projects/AircraftMonitoringDevice/Firmware/TestCodes/w25q_ext_flash/build/w25q_ext_flash/zephyr/drivers/watchdog/CMakeFiles/drivers__watchdog.dir
 /media/abdullah/Development/Abdullah/projects/AircraftMonitoringDevice/Firmware/TestCodes/w25q_ext_flash/build/w25q_ext_flash/modules/nrf/CMakeFiles/ncs_version_h.dir
 /media/abdullah/Development/Abdullah/projects/AircraftMonitoringDevice/Firmware/TestCodes/w25q_ext_flash/build/w25q_ext_flash/modules/nrf/CMakeFiles/edit_cache.dir
 /media/abdullah/Development/Abdullah/projects/AircraftMonitoringDevice/Firmware/TestCodes/w25q_ext_flash/build/w25q_ext_flash/modules/nrf/CMakeFiles/rebuild_cache.dir

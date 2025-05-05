@@ -8,14 +8,25 @@
 
 LOG_MODULE_REGISTER(main, LOG_LEVEL_INF);
 
+const static struct device *flash_dev = DEVICE_DT_GET(DT_NODELABEL(w25q128jv));
+
 // Declare default LittleFS config for partition "storagefs"
-FS_LITTLEFS_DECLARE_DEFAULT_CONFIG(storagefs);
+// FS_LITTLEFS_DECLARE_DEFAULT_CONFIG(littlefs_storage);
+
+// static struct fs_mount_t fs_mnt = {
+//     .type = FS_LITTLEFS,
+//     .mnt_point = "/lfs",
+//     .fs_data = &littlefs_storage,
+//     .storage_dev = (void *)FIXED_PARTITION_ID(littlefs_storage),
+// };
+
+FS_LITTLEFS_DECLARE_DEFAULT_CONFIG(storage);
 
 static struct fs_mount_t fs_mnt = {
     .type = FS_LITTLEFS,
     .mnt_point = "/lfs",
-    .fs_data = &storagefs,
-    .storage_dev = (void *)FIXED_PARTITION_ID(storagefs),
+    .fs_data = &storage,
+    .storage_dev = (void *)FIXED_PARTITION_ID(littlefs_storage),
 };
 
 static void append_to_file(const char *filename, const char *data)
@@ -94,9 +105,20 @@ static void list_files(const char *dirpath)
 void main(void)
 {
     int rc;
-    //  LOG_INF("Erasing flash partition...");
-    // erase_full_flash_partition();
-    // erase_full_flash_partition();
+    //  size_t page_size = flash_get_page_size(flash_dev);
+    size_t page_count = flash_get_page_count(flash_dev);
+    struct flash_pages_info info;
+    int ret = flash_get_page_info_by_idx(flash_dev, 0, &info);
+
+    if (ret == 0) {
+        size_t flash_size = page_count * info.size;
+        LOG_INF("External flash size: %zu bytes\n", flash_size);
+    } else {
+        LOG_ERR("Failed to get page info, error: %d\n", ret);
+    }
+ 
+        LOG_INF("Erasing flash partition...");
+    erase_full_flash_partition();
     LOG_INF("Mounting LittleFS...");
     rc = fs_mount(&fs_mnt);
     if (rc < 0) {
@@ -133,7 +155,7 @@ void erase_full_flash_partition(void)
     size_t erase_size = 4096; // W25Q128JV sector size = 4KB
 
     // Open your partition (example: storagefs)
-    rc = flash_area_open(FIXED_PARTITION_ID(storagefs), &fa);
+    rc = flash_area_open(FIXED_PARTITION_ID(littlefs_storage), &fa);
     if (rc < 0) {
         LOG_ERR("Failed to open flash area (%d)", rc);
         return;
@@ -149,15 +171,30 @@ void erase_full_flash_partition(void)
     LOG_INF("Erasing flash area: Offset=0x%08x, Size=%u bytes", (uint32_t)fa->fa_off, (uint32_t)fa->fa_size);
 
     // Erase block-by-block
-    while (offset < fa->fa_size) {
-        rc = flash_erase(flash_dev, fa->fa_off + offset, erase_size);
-        if (rc != 0) {
-            LOG_ERR("Failed to erase at 0x%08x (err %d)", (uint32_t)(fa->fa_off + offset), rc);
-            flash_area_close(fa);
-            return;
-        }
-        offset += erase_size;
+   size_t total_erased = 0;
+size_t sector_count = fa->fa_size / erase_size;
+
+LOG_INF("Starting flash erase: %u sectors of %u bytes each (total: %u bytes)", 
+        sector_count, erase_size, (uint32_t)fa->fa_size);
+
+while (offset < fa->fa_size) {
+    rc = flash_erase(flash_dev, fa->fa_off + offset, erase_size);
+    if (rc != 0) {
+        LOG_ERR("Failed to erase at 0x%08x (err %d)", (uint32_t)(fa->fa_off + offset), rc);
+        flash_area_close(fa);
+        return;
     }
+
+    total_erased += erase_size;
+    LOG_INF("Erased sector at 0x%08x (%u/%u bytes, %.2f%% complete)",
+            (uint32_t)(fa->fa_off + offset),
+            total_erased, (uint32_t)fa->fa_size,
+            ((float)total_erased / fa->fa_size) * 100.0f);
+
+    offset += erase_size;
+}
+
+LOG_INF("Flash erase complete: %u bytes erased successfully.", (uint32_t)total_erased);
 
     flash_area_close(fa);
 

@@ -139,6 +139,6 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/media/abdullah/Development/Abdullah/projects/AircraftMonitoringDevice/Firmware/TestCodes/w25q_ext_flash/build/w25q_ext_flash/zephyr/subsys/disk/cmake_install.cmake")
+  include("/media/abdullah/Development/Abdullah/projects/AircraftMonitoringDevice/Firmware/TestCodes/w25q_ext_flash/build/w25q_ext_flash/zephyr/subsys/settings/cmake_install.cmake")
 endif()
 

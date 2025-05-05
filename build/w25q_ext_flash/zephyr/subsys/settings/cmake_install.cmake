@@ -1,4 +1,4 @@
-# Install script for directory: /home/abdullah/ncs/v2.9.0/zephyr/drivers/hwinfo
+# Install script for directory: /home/abdullah/ncs/v2.9.0/zephyr/subsys/settings
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -35,5 +35,10 @@ endif()
 # Set default install directory permissions.
 if(NOT DEFINED CMAKE_OBJDUMP)
   set(CMAKE_OBJDUMP "/home/abdullah/ncs/toolchains/b77d8c1312/opt/zephyr-sdk/arm-zephyr-eabi/bin/arm-zephyr-eabi-objdump")
+endif()
+
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for the subdirectory.
+  include("/media/abdullah/Development/Abdullah/projects/AircraftMonitoringDevice/Firmware/TestCodes/w25q_ext_flash/build/w25q_ext_flash/zephyr/subsys/settings/src/cmake_install.cmake")
 endif()
 

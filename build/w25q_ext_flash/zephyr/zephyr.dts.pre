@@ -1273,12 +1273,12 @@ zephyr_udc0: &usbd {
     pinctrl-names = "default", "sleep";
     cs-gpios = <&gpio0 21 (1 << 0)>;
 
-    w25q128jv: flash@0 {
+    w25q128jv: w25q128jv@0 {
         compatible = "jedec,spi-nor";
         reg = <0>;
         spi-max-frequency = <32000000>;
         jedec-id = [ef 40 18];
-        size = <0x1000000>;
+        size = <0x8000000>;
         wp-gpios = <&gpio0 25 (1 << 0)>;
         hold-gpios = <&gpio0 20 (1 << 0)>;
     };
@@ -1286,13 +1286,14 @@ zephyr_udc0: &usbd {
 
 
 &w25q128jv {
+    size = <0x8000000>;
     partitions {
         compatible = "fixed-partitions";
         #address-cells = <1>;
         #size-cells = <1>;
 
-        storagefs: partition@0 {
-            label = "storagefs";
+        littlefs_storage: partition@0 {
+            label = "W25Q128JV";
             reg = <0x00000000 0x01000000>;
         };
     };

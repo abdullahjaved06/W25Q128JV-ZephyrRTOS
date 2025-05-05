@@ -166,7 +166,7 @@ HWM:INTERNAL=v2
 //Zephyr hardware model
 HWMv2:INTERNAL=True
 //nRF Connect SDK static partition manager file hash
-STATIC_PM_FILE_HASH:INTERNAL=8500ce5a73b34aa0c721f21cac273436
+STATIC_PM_FILE_HASH:INTERNAL=e70cd4b941377a5c37531f04b5481adc
 //West
 WEST:INTERNAL=/home/abdullah/ncs/toolchains/b77d8c1312/usr/local/bin/python3.12;-m;west
 _Python3_EXECUTABLE:INTERNAL=/home/abdullah/ncs/toolchains/b77d8c1312/usr/local/bin/python3.12

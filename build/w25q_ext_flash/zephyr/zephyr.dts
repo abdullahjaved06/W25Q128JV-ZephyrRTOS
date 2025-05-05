@@ -169,20 +169,20 @@
 			pinctrl-1 = < &spi0_sleep >;
 			pinctrl-names = "default", "sleep";
 			cs-gpios = < &gpio0 0x15 0x1 >;
-			w25q128jv: flash@0 {
+			w25q128jv: w25q128jv@0 {
 				compatible = "jedec,spi-nor";
 				reg = < 0x0 >;
 				spi-max-frequency = < 0x1e84800 >;
 				jedec-id = [ EF 40 18 ];
-				size = < 0x1000000 >;
+				size = < 0x8000000 >;
 				wp-gpios = < &gpio0 0x19 0x1 >;
 				hold-gpios = < &gpio0 0x14 0x1 >;
 				partitions {
 					compatible = "fixed-partitions";
 					#address-cells = < 0x1 >;
 					#size-cells = < 0x1 >;
-					storagefs: partition@0 {
-						label = "storagefs";
+					littlefs_storage: partition@0 {
+						label = "W25Q128JV";
 						reg = < 0x0 0x1000000 >;
 					};
 				};

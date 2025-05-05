@@ -1,4 +1,4 @@
-# Install script for directory: /home/abdullah/ncs/v2.9.0/zephyr/drivers/watchdog
+# Install script for directory: /home/abdullah/ncs/v2.9.0/zephyr/subsys/settings/src
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
